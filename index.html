@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pure Paintings — Curated Classical Exhibit</title>
+  <title>Pure Paintings • Curated Classical Exhibit</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -16,11 +16,18 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="inner">
+    <div class="inner wrap">
       <div class="title-block">
         <h1 class="brand">Pure Paintings</h1>
-        <p class="subtitle">A curated selection of classical and timeless paintings</p>
+        <p class="subtitle">A curated classical paintings exhibit — oil, tempera & acrylics</p>
       </div>
+
+      <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#featured">Featured</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
       <div class="meta">
         <div id="clock" class="clock" aria-live="polite"></div>
@@ -30,69 +37,162 @@
   </header>
 
   <main class="wrap">
-    <section class="card about" id="about">
-      <h2>About the Exhibit</h2>
+    <!-- HERO -->
+    <section class="hero card" id="hero">
+      <figure class="hero-media">
+        <!-- large classical painting (public domain) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg"
+             alt="Claude Monet - Water Lilies (public domain)">
+      </figure>
+      <div class="hero-text">
+        <h2>Walking through paint — classical works for quiet looking</h2>
+        <p>Slow down. Notice brush, glaze, and light. Our curated selection highlights the craft and subtlety of painting.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card about">
+      <h3>About the Exhibit</h3>
       <p>
-        <strong>Pure Paintings</strong> celebrates the craft and history of painting — oil on canvas, tempera, and
-        classical techniques from European and global traditions. Each work is chosen for its formal strength,
-        colour harmony, and contemplative power. We encourage slow looking and quiet reflection.
+        <strong>Pure Paintings</strong> brings together timeless, museum-quality works (public-domain and royalty-free)
+        so the viewer can focus on composition, color, and technique. This online gallery is designed like a quiet gallery room:
+        paper-white walls, soft spacing, and large reproductions to invite contemplation.
       </p>
     </section>
 
-    <section id="gallery" class="gallery-section">
-      <h2 class="section-title">Featured Paintings</h2>
+    <!-- FEATURED ARTICLES -->
+    <section id="featured" class="card featured">
+      <h3>Featured Paintings</h3>
 
-      <div class="grid">
-        <!-- Article 1: Classical oil painting -->
+      <div class="grid featured-grid">
+        <!-- Article 1 -->
         <article class="art-card">
           <figure class="art-media">
-            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80"
-                 alt="Classical oil painting with bold brushwork and rich texture">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Starry_Night.jpg"
+                 alt="Vincent van Gogh - The Starry Night (public domain)">
           </figure>
-
           <div class="art-details">
-            <h3 class="art-title">Vivid Strokes (Oil on Canvas)</h3>
-            <p class="art-desc">An expressive oil painting defined by textured brushwork and a luminous palette — a study in movement, light and painterly touch.</p>
-            <div class="meta-row">
-              <span class="meta-item">Medium: Oil on canvas</span>
-              <span class="meta-item">Size: 90 × 120 cm</span>
-            </div>
+            <h4>Article 1 — Starry Night</h4>
+            <p>Vincent van Gogh, 1889. A masterful study of night, light and expressive brushwork. (public domain)</p>
+            <button class="view-btn" data-src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Starry_Night.jpg"
+                    data-title="Starry Night — Vincent van Gogh">View</button>
           </div>
         </article>
 
-        <!-- Article 2: Classical acrylic / oil painting -->
+        <!-- Article 2 -->
         <article class="art-card">
           <figure class="art-media">
-            <img src="https://images.unsplash.com/photo-1500336624523-d727130c3328?auto=format&fit=crop&w=1600&q=80"
-                 alt="Colorful acrylic painting with layered harmonies">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Meisje_met_de_parel.jpg"
+                 alt="Johannes Vermeer - Girl with a Pearl Earring (public domain)">
           </figure>
-
           <div class="art-details">
-            <h3 class="art-title">Harmony of Colours (Acrylic)</h3>
-            <p class="art-desc">A balanced composition where warm and cool tones converse. The surface retains subtle layering and glazing reminiscent of classic studio techniques.</p>
-            <div class="meta-row">
-              <span class="meta-item">Medium: Acrylic on canvas</span>
-              <span class="meta-item">Year: 2024</span>
-            </div>
+            <h4>Article 2 — Girl with a Pearl Earring</h4>
+            <p>Johannes Vermeer, c.1665. Intimate portraiture and sublime use of light and color. (public domain)</p>
+            <button class="view-btn" data-src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Meisje_met_de_parel.jpg"
+                    data-title="Girl with a Pearl Earring — Johannes Vermeer">View</button>
           </div>
         </article>
       </div>
+    </section>
 
-      <!-- More galleries / future slot -->
-      <div class="more card">
-        <h4>More Collections Coming Soon</h4>
-        <p>To add another painting, copy an <code>.art-card</code> block inside the <code>.grid</code> element.</p>
+    <!-- GALLERY -->
+    <section id="gallery" class="card gallery-section">
+      <h3>Gallery — Additional Paintings</h3>
+
+      <div class="grid gallery-grid">
+        <!-- 6 more public-domain images; click to open lightbox -->
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg"
+               alt="Monet - Water Lilies"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg">
+          <figcaption>Claude Monet — Water Lilies</figcaption>
+        </figure>
+
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+               alt="Leonardo da Vinci - Mona Lisa"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg">
+          <figcaption>Leonardo da Vinci — Mona Lisa</figcaption>
+        </figure>
+
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Rembrandt_Harmensz._van_Rijn_-_The_Nightwatch_-_Google_Art_Project.jpg"
+               alt="Rembrandt - The Night Watch"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/6/6f/Rembrandt_Harmensz._van_Rijn_-_The_Nightwatch_-_Google_Art_Project.jpg">
+          <figcaption>Rembrandt — The Night Watch</figcaption>
+        </figure>
+
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project.jpg"
+               alt="Botticelli - The Birth of Venus"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/3/34/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project.jpg">
+          <figcaption>Botticelli — The Birth of Venus</figcaption>
+        </figure>
+
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Joseph_Mallord_William_Turner%2C_The_Fighting_Temeraire%2C_1839.jpg"
+               alt="J.M.W. Turner - The Fighting Temeraire"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/0/06/Joseph_Mallord_William_Turner%2C_The_Fighting_Temeraire%2C_1839.jpg">
+          <figcaption>Turner — The Fighting Temeraire</figcaption>
+        </figure>
+
+        <figure class="thumb">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Edouard_Manet_-_Le_Dejeuner_sur_l%27herbe.jpg"
+               alt="Édouard Manet - Luncheon on the Grass"
+               data-full="https://upload.wikimedia.org/wikipedia/commons/8/80/Edouard_Manet_-_Le_Dejeuner_sur_l%27herbe.jpg">
+          <figcaption>Manet — Luncheon on the Grass</figcaption>
+        </figure>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card contact">
+      <h3>Contact & Subscribe</h3>
+      <p>Questions, commissions or updates? Send a message or subscribe to exhibition news.</p>
+
+      <form id="contactForm" class="contact-form">
+        <div class="row">
+          <label>
+            Name
+            <input type="text" name="from_name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="from_email" required placeholder="you@example.com">
+          </label>
+        </div>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Write your message..."></textarea>
+        </label>
+
+        <div class="row actions">
+          <button type="submit" class="btn primary">Send Message</button>
+          <input id="subscribeEmail" type="email" placeholder="Subscribe with your email" />
+          <button id="subscribeBtn" type="button" class="btn">Subscribe</button>
+        </div>
+
+        <div id="formStatus" class="status" aria-live="polite"></div>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <small>© 2025 Pure Paintings • Curated Classical Exhibit</small>
+      <small>© 2025 Pure Paintings — Curated Classical Exhibit</small>
     </div>
   </footer>
 
-  <!-- App script -->
+  <!-- LIGHTBOX (hidden initially) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lb-close" aria-label="Close">✕</button>
+      <img id="lb-img" src="" alt="">
+      <div id="lb-caption" class="lb-caption"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
