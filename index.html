@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pure Paintings — Curated Classical Exhibit</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS client -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <div class="title-block">
+        <h1 class="brand">Pure Paintings</h1>
+        <p class="subtitle">A curated selection of classical and timeless paintings</p>
+      </div>
+
+      <div class="meta">
+        <div id="clock" class="clock" aria-live="polite"></div>
+        <div id="countdown" class="countdown" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card about" id="about">
+      <h2>About the Exhibit</h2>
+      <p>
+        <strong>Pure Paintings</strong> celebrates the craft and history of painting — oil on canvas, tempera, and
+        classical techniques from European and global traditions. Each work is chosen for its formal strength,
+        colour harmony, and contemplative power. We encourage slow looking and quiet reflection.
+      </p>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <h2 class="section-title">Featured Paintings</h2>
+
+      <div class="grid">
+        <!-- Article 1: Classical oil painting -->
+        <article class="art-card">
+          <figure class="art-media">
+            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80"
+                 alt="Classical oil painting with bold brushwork and rich texture">
+          </figure>
+
+          <div class="art-details">
+            <h3 class="art-title">Vivid Strokes (Oil on Canvas)</h3>
+            <p class="art-desc">An expressive oil painting defined by textured brushwork and a luminous palette — a study in movement, light and painterly touch.</p>
+            <div class="meta-row">
+              <span class="meta-item">Medium: Oil on canvas</span>
+              <span class="meta-item">Size: 90 × 120 cm</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Classical acrylic / oil painting -->
+        <article class="art-card">
+          <figure class="art-media">
+            <img src="https://images.unsplash.com/photo-1500336624523-d727130c3328?auto=format&fit=crop&w=1600&q=80"
+                 alt="Colorful acrylic painting with layered harmonies">
+          </figure>
+
+          <div class="art-details">
+            <h3 class="art-title">Harmony of Colours (Acrylic)</h3>
+            <p class="art-desc">A balanced composition where warm and cool tones converse. The surface retains subtle layering and glazing reminiscent of classic studio techniques.</p>
+            <div class="meta-row">
+              <span class="meta-item">Medium: Acrylic on canvas</span>
+              <span class="meta-item">Year: 2024</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- More galleries / future slot -->
+      <div class="more card">
+        <h4>More Collections Coming Soon</h4>
+        <p>To add another painting, copy an <code>.art-card</code> block inside the <code>.grid</code> element.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 Pure Paintings • Curated Classical Exhibit</small>
+    </div>
+  </footer>
+
+  <!-- App script -->
+  <script src="script.js"></script>
+</body>
+</html>
