@@ -1,198 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pure Paintings • Curated Classical Exhibit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Academy</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- EmailJS client -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner wrap">
-      <div class="title-block">
-        <h1 class="brand">Pure Paintings</h1>
-        <p class="subtitle">A curated classical paintings exhibit — oil, tempera & acrylics</p>
-      </div>
 
-      <nav class="top-nav">
-        <a href="#about">About</a>
-        <a href="#featured">Featured</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <header>
+    <h1>♟ Chess Academy</h1>
 
-      <div class="meta">
-        <div id="clock" class="clock" aria-live="polite"></div>
-        <div id="countdown" class="countdown" aria-live="polite"></div>
-      </div>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="practice.html">Practice</a>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero card" id="hero">
-      <figure class="hero-media">
-        <!-- large classical painting (public domain) -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg"
-             alt="Claude Monet - Water Lilies (public domain)">
-      </figure>
-      <div class="hero-text">
-        <h2>Walking through paint — classical works for quiet looking</h2>
-        <p>Slow down. Notice brush, glaze, and light. Our curated selection highlights the craft and subtlety of painting.</p>
-      </div>
-    </section>
+  <section class="hero">
+    <h2>Learn Chess From Beginner To Pro</h2>
 
-    <!-- ABOUT -->
-    <section id="about" class="card about">
-      <h3>About the Exhibit</h3>
-      <p>
-        <strong>Pure Paintings</strong> brings together timeless, museum-quality works (public-domain and royalty-free)
-        so the viewer can focus on composition, color, and technique. This online gallery is designed like a quiet gallery room:
-        paper-white walls, soft spacing, and large reproductions to invite contemplation.
-      </p>
-    </section>
+    <p>
+      Master chess with interactive lessons,
+      strategy training, and practice boards.
+    </p>
 
-    <!-- FEATURED ARTICLES -->
-    <section id="featured" class="card featured">
-      <h3>Featured Paintings</h3>
+    <a href="lessons.html">
+      <button>Start Learning</button>
+    </a>
+  </section>
 
-      <div class="grid featured-grid">
-        <!-- Article 1 -->
-        <article class="art-card">
-          <figure class="art-media">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Starry_Night.jpg"
-                 alt="Vincent van Gogh - The Starry Night (public domain)">
-          </figure>
-          <div class="art-details">
-            <h4>Article 1 — Starry Night</h4>
-            <p>Vincent van Gogh, 1889. A masterful study of night, light and expressive brushwork. (public domain)</p>
-            <button class="view-btn" data-src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Starry_Night.jpg"
-                    data-title="Starry Night — Vincent van Gogh">View</button>
-          </div>
-        </article>
+  <section class="features">
 
-        <!-- Article 2 -->
-        <article class="art-card">
-          <figure class="art-media">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Meisje_met_de_parel.jpg"
-                 alt="Johannes Vermeer - Girl with a Pearl Earring (public domain)">
-          </figure>
-          <div class="art-details">
-            <h4>Article 2 — Girl with a Pearl Earring</h4>
-            <p>Johannes Vermeer, c.1665. Intimate portraiture and sublime use of light and color. (public domain)</p>
-            <button class="view-btn" data-src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Meisje_met_de_parel.jpg"
-                    data-title="Girl with a Pearl Earring — Johannes Vermeer">View</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="card gallery-section">
-      <h3>Gallery — Additional Paintings</h3>
-
-      <div class="grid gallery-grid">
-        <!-- 6 more public-domain images; click to open lightbox -->
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg"
-               alt="Monet - Water Lilies"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg">
-          <figcaption>Claude Monet — Water Lilies</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
-               alt="Leonardo da Vinci - Mona Lisa"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg">
-          <figcaption>Leonardo da Vinci — Mona Lisa</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Rembrandt_Harmensz._van_Rijn_-_The_Nightwatch_-_Google_Art_Project.jpg"
-               alt="Rembrandt - The Night Watch"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/6/6f/Rembrandt_Harmensz._van_Rijn_-_The_Nightwatch_-_Google_Art_Project.jpg">
-          <figcaption>Rembrandt — The Night Watch</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project.jpg"
-               alt="Botticelli - The Birth of Venus"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/3/34/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project.jpg">
-          <figcaption>Botticelli — The Birth of Venus</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Joseph_Mallord_William_Turner%2C_The_Fighting_Temeraire%2C_1839.jpg"
-               alt="J.M.W. Turner - The Fighting Temeraire"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/0/06/Joseph_Mallord_William_Turner%2C_The_Fighting_Temeraire%2C_1839.jpg">
-          <figcaption>Turner — The Fighting Temeraire</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Edouard_Manet_-_Le_Dejeuner_sur_l%27herbe.jpg"
-               alt="Édouard Manet - Luncheon on the Grass"
-               data-full="https://upload.wikimedia.org/wikipedia/commons/8/80/Edouard_Manet_-_Le_Dejeuner_sur_l%27herbe.jpg">
-          <figcaption>Manet — Luncheon on the Grass</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card contact">
-      <h3>Contact & Subscribe</h3>
-      <p>Questions, commissions or updates? Send a message or subscribe to exhibition news.</p>
-
-      <form id="contactForm" class="contact-form">
-        <div class="row">
-          <label>
-            Name
-            <input type="text" name="from_name" required placeholder="Your name">
-          </label>
-          <label>
-            Email
-            <input type="email" name="from_email" required placeholder="you@example.com">
-          </label>
-        </div>
-
-        <label>
-          Message
-          <textarea name="message" rows="5" placeholder="Write your message..."></textarea>
-        </label>
-
-        <div class="row actions">
-          <button type="submit" class="btn primary">Send Message</button>
-          <input id="subscribeEmail" type="email" placeholder="Subscribe with your email" />
-          <button id="subscribeBtn" type="button" class="btn">Subscribe</button>
-        </div>
-
-        <div id="formStatus" class="status" aria-live="polite"></div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© 2025 Pure Paintings — Curated Classical Exhibit</small>
+    <div class="card">
+      <h3>📘 Beginner Lessons</h3>
+      <p>Learn how every chess piece moves.</p>
     </div>
+
+    <div class="card">
+      <h3>♞ Practice Board</h3>
+      <p>Move pieces and practice strategies.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏆 Improve Skills</h3>
+      <p>Train like a professional player.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Chess Academy</p>
   </footer>
 
-  <!-- LIGHTBOX (hidden initially) -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <div class="lightbox-inner">
-      <button class="lb-close" aria-label="Close">✕</button>
-      <img id="lb-img" src="" alt="">
-      <div id="lb-caption" class="lb-caption"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
