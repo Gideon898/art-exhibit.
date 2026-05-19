@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Chess</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+</head>
+<body>
+
+<header>
+  <h1>♟ Practice Board</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="practice.html">Practice</a>
+  </nav>
+</header>
+
+<section class="practice-section">
+
+  <h2>Move The Pieces Freely</h2>
+
+  <div id="board"></div>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+<script>
+  var board = Chessboard('board', {
+    draggable: true,
+    position: 'start'
+  });
+</script>
+
+</body>
+</html>
